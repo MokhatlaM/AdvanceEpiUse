@@ -64,12 +64,12 @@ namespace FiveCardDraw
             }
         }
 
-        static List<Card> DealCards(List<Card> cards)
+        static List<Card> DealCards(List<Card> cards, int AmountOfCards)
         {
             var hand = new List<Card>();
 
             Random random = new Random();
-            for(int i = 0; i < hand.Count; i++)
+            for(int i = 0; i < AmountOfCards; i++)
             {
                 int j = random.Next(0, cards.Count);
                 hand.Add(cards[j]);
@@ -154,6 +154,12 @@ namespace FiveCardDraw
 
         static void Main(string[] args)
         {
+            Console.WriteLine("Shuffling... Shuffling... Shuffling");
+            List<Card> cards = getDeck();
+            ShuffleDeck(cards);
+
+            List<Card> hand = DealCards(cards, 5);
+
 
         }
        
