@@ -85,71 +85,84 @@ namespace FiveCardDraw
             bool ThreeOfAKind = false;
             bool FourOfAKind = false;
             bool FullHouse = false;
-            bool Flush = false;
+            bool Flush = hand.All(card => card.CardSuit == hand[0].CardSuit);
             bool StraightFlush = false;
-            bool HighCards = false;
             bool Straight = false;
+            bool HighCard =false;
 
-            for (int i = 0;i < hand.Count - 1;i++)
+            for (int i = 0; i < hand.Count - 1; i++)
             {
                 if (hand[i].CardValue == hand[i + 1].CardValue)
                 {
-                    OnePair = true; 
-                    if(1<hand.Count - 2 && hand[i].CardValue == hand[i + 2].CardValue)
+                    OnePair = true;
+                    if (i < hand.Count - 2 && hand[i].CardValue == hand[i + 2].CardValue)
                     {
                         ThreeOfAKind = true;
-                        if(1<hand.Count - 3 && hand[i].CardValue == hand[i + 3].CardValue)
+                        if (i < hand.Count - 3 && hand[i].CardValue == hand[i + 3].CardValue)
                         {
                             FourOfAKind = true;
                         }
                     }
                 }
             }
-            if (ThreeOfAKind && OnePair) {
+
+            if (ThreeOfAKind && OnePair)
+            {
                 FullHouse = true;
             }
-            for(int i = 0;i < hand.Count -1;i++)
+
+            for (int i = 0; i < hand.Count - 1; i++)
             {
                 if (hand[i].CardValue + 1 != hand[i + 1].CardValue)
                 {
                     break;
                 }
-                if( i == hand.Count - 2 )
+                if (i == hand.Count - 2)
                 {
                     Straight = true;
                 }
             }
-            switch (true)
+
+        
+            if (Straight && Flush)
             {
-                case (Straight && Flush):
-                    StraightFlush = true;
-                    break;
-                case FourOfAKind:
-                    break;
-                case FullHouse:
-                    break;
-                case Flush:
-                    break;
-                case Straight:
-                    break;
-                case ThreeOfAKind:
-                    break;
-                case OnePair:
-                    TwoPair = hand.Count(card => hand.Count(j => j.CardValue == card.CardValue) == 2) == 4;
-                    break;
-                default:
-                    HighCards = true;
-                    break;
+                return PlayerHandStrength.StraightFlush;
+            }
+            else if (FourOfAKind)
+            {
+                return PlayerHandStrength.FourOfAKind;
+            }
+            else if (FullHouse)
+            {
+                return PlayerHandStrength.FullHouse;
+            }
+            else if (Flush)
+            {
+                return PlayerHandStrength.Flush;
+            }
+            else if (Straight)
+            {
+                return PlayerHandStrength.Straight;
+            }
+            else if (ThreeOfAKind)
+            {
+                return PlayerHandStrength.ThreeOfAKind;
+            }
+            else if (OnePair)
+            {
+                TwoPair = hand.GroupBy(card => card.CardValue)
+                                .Count(group => group.Count() == 2) == 2;
+                if (TwoPair)
+                {
+                    return PlayerHandStrength.TwoPair;
+                }
+                else
+                {
+                    return PlayerHandStrength.OnePair;
+                }
             }
 
-            if (StraightFlush) return PlayerHandStrength.StraightFlush;
-            if (FourOfAKind) return PlayerHandStrength.FourOfAKind;
-            if (FullHouse) return PlayerHandStrength.FullHouse;
-            if (Flush) return PlayerHandStrength.Flush;
-            if (Straight) return PlayerHandStrength.Straight;
-            if (ThreeOfAKind) return PlayerHandStrength.ThreeOfAKind;
-            if (TwoPair) return PlayerHandStrength.TwoPair;
-            if (OnePair) return PlayerHandStrength.OnePair;
+            return PlayerHandStrength.NoPair;
         }
 
         static void Main(string[] args)
@@ -159,7 +172,12 @@ namespace FiveCardDraw
             ShuffleDeck(cards);
 
             List<Card> hand = DealCards(cards, 5);
+            Console.WriteLine(  "Your hand: ");
+            foreach (var card in hand) Console.WriteLine($"{card.CardValue} of {card.CardSuit}");
+            Console.WriteLine();
+            PlayerHandStrength handStrength = CheckHand(hand);
 
+            Console.WriteLine($"You have: {handStrength}");
 
         }
        
