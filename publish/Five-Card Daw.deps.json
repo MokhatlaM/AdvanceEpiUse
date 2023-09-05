@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Five-Card Daw/1.0.0": {
+        "runtime": {
+          "Five-Card Daw.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Five-Card Daw/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

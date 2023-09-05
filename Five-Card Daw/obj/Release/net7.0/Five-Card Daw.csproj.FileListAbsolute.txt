@@ -1,0 +1,15 @@
+C:\Users\mokha\OneDrive\Documents\GitHub\AdvanceEpiUse\Five-Card Daw\bin\Release\net7.0\Five-Card Daw.exe
+C:\Users\mokha\OneDrive\Documents\GitHub\AdvanceEpiUse\Five-Card Daw\bin\Release\net7.0\Five-Card Daw.deps.json
+C:\Users\mokha\OneDrive\Documents\GitHub\AdvanceEpiUse\Five-Card Daw\bin\Release\net7.0\Five-Card Daw.runtimeconfig.json
+C:\Users\mokha\OneDrive\Documents\GitHub\AdvanceEpiUse\Five-Card Daw\bin\Release\net7.0\Five-Card Daw.dll
+C:\Users\mokha\OneDrive\Documents\GitHub\AdvanceEpiUse\Five-Card Daw\bin\Release\net7.0\Five-Card Daw.pdb
+C:\Users\mokha\OneDrive\Documents\GitHub\AdvanceEpiUse\Five-Card Daw\obj\Release\net7.0\Five-Card Daw.csproj.AssemblyReference.cache
+C:\Users\mokha\OneDrive\Documents\GitHub\AdvanceEpiUse\Five-Card Daw\obj\Release\net7.0\Five-Card Daw.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mokha\OneDrive\Documents\GitHub\AdvanceEpiUse\Five-Card Daw\obj\Release\net7.0\Five-Card Daw.AssemblyInfoInputs.cache
+C:\Users\mokha\OneDrive\Documents\GitHub\AdvanceEpiUse\Five-Card Daw\obj\Release\net7.0\Five-Card Daw.AssemblyInfo.cs
+C:\Users\mokha\OneDrive\Documents\GitHub\AdvanceEpiUse\Five-Card Daw\obj\Release\net7.0\Five-Card Daw.csproj.CoreCompileInputs.cache
+C:\Users\mokha\OneDrive\Documents\GitHub\AdvanceEpiUse\Five-Card Daw\obj\Release\net7.0\Five-Card Daw.dll
+C:\Users\mokha\OneDrive\Documents\GitHub\AdvanceEpiUse\Five-Card Daw\obj\Release\net7.0\refint\Five-Card Daw.dll
+C:\Users\mokha\OneDrive\Documents\GitHub\AdvanceEpiUse\Five-Card Daw\obj\Release\net7.0\Five-Card Daw.pdb
+C:\Users\mokha\OneDrive\Documents\GitHub\AdvanceEpiUse\Five-Card Daw\obj\Release\net7.0\Five-Card Daw.genruntimeconfig.cache
+C:\Users\mokha\OneDrive\Documents\GitHub\AdvanceEpiUse\Five-Card Daw\obj\Release\net7.0\ref\Five-Card Daw.dll

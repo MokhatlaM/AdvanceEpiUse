@@ -1,0 +1,5 @@
+C:\Users\mokha\OneDrive\Documents\GitHub\AdvanceEpiUse\publish\Five-Card Daw.exe
+C:\Users\mokha\OneDrive\Documents\GitHub\AdvanceEpiUse\publish\Five-Card Daw.dll
+C:\Users\mokha\OneDrive\Documents\GitHub\AdvanceEpiUse\publish\Five-Card Daw.deps.json
+C:\Users\mokha\OneDrive\Documents\GitHub\AdvanceEpiUse\publish\Five-Card Daw.runtimeconfig.json
+C:\Users\mokha\OneDrive\Documents\GitHub\AdvanceEpiUse\publish\Five-Card Daw.pdb
